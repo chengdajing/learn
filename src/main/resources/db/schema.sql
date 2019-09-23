@@ -16,3 +16,10 @@ CREATE TABLE `user` (
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
 ALTER TABLE `user` ADD UNIQUE (`phone`);
+
+DROP TABLE IF EXISTS  `card`;
+CREATE TABLE  `card` (
+   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+   `studentname` varchar(50) DEFAULT NULL comment '学生姓名',
+  `studentnumber` varchar(50) DEFAULT NULL,
+);

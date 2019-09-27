@@ -5,7 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import edu.hubu.learn.entity.Card;
 import edu.hubu.learn.entity.User;
+import edu.hubu.learn.service.CardService;
 import edu.hubu.learn.service.UserService;
 
 @Controller
@@ -30,4 +32,16 @@ public class IndexController {
         mav.setViewName("user");
         return mav;
     }
+
+    @Autowired
+    private CardService cardService;
+    @RequestMapping("/card")
+    public ModelAndView card() {
+        ModelAndView mav = new ModelAndView();
+        Card card = cardService.getCard(1l);
+        mav.addObject("card", card);
+        mav.setViewName("card");
+        return mav;
+    }
+
 }

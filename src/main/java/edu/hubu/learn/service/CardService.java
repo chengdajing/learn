@@ -20,4 +20,7 @@ public class CardService {
     public List<Card> getcards() {
         return cardDao.findAll();
     }
+    public Card addCard(Card card) {
+        return cardDao.save(card);
+    }
 }

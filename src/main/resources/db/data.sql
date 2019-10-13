@@ -6,6 +6,6 @@ INSERT INTO `user` (id, username, password, role) VALUES ('5', 'user3', '1234', 
 INSERT INTO `user` (id, username, password, role) VALUES ('6', 'user4', '1234', 'user');
 
 COMMIT;
-INSERT INTO `card` (studentname, studentnumber) VALUES ('小鱼', '1234');
-INSERT INTO`card`  (studentname, studentnumber) VALUES ('小花', '1235');
-INSERT INTO`card`  (studentname, studentnumber) VALUES ('小明', '1236');
+INSERT INTO `card` (id,studentname, studentnumber) VALUES ('1','小鱼', '1234');
+INSERT INTO`card`  (id,studentname, studentnumber) VALUES ('2','小花', '1235');
+INSERT INTO`card`  (id,studentname, studentnumber) VALUES ('3','小明', '1236');

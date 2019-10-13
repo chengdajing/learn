@@ -22,23 +22,22 @@
      <div class="row">
        <div class="col-md-4">
          <ul class="nav nav-pills nav-stacked">
-           <li role="presentation" class="active"><a href="/card/list">列表</a></li>
-           <li role="presentation"><a href="/card/add">新增</a></li>
+           <li role="presentation"><a href="/card/list">列表</a></li>
+           <li role="presentation" class="active"><a href="/card/add">新增</a></li>
          </ul>
        </div>
        <div class="col-md-8">      
-         <table class="table table-hover">
-           <thead>
-           <th>ID</th><th>名字</th><th>学号</th>
-           </thead>
-           <tbody>
-           <#list card as card>
-           <tr>
-           <td>${card.id}</td><td>${card.studentname}</td><td>${card.studentnumber}</td>
-           </tr>
-           </#list>
-           </tbody>
-         </table>
+         <form action="/card/do_add">
+             <div class="form-group">
+                 <label for="studentname">名字</label>
+                 <input type="text" class="form-control" id="studentname" name="studentname" placeholder="请输入名字">
+             </div>
+             <div class="form-group">
+                 <label for="studentnumber">学号</label>
+                 <input type="studentnumber" class="form-control" id="studentnumber" name="studentnumber" placeholder="请输入学号">
+             </div>
+             <button type="submit" class="btn btn-default">确认</button>
+         </form>
        </div>
      </div>
    </div>

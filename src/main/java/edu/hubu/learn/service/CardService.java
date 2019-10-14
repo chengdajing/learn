@@ -23,4 +23,10 @@ public class CardService {
     public Card addCard(Card card) {
         return cardDao.save(card);
     }
+	public void deleteCard(Long id) {
+        cardDao.deleteById(id);
+	}
+	public void modifyCard(Card card) {
+        cardDao.save(card);
+	}
 }

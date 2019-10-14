@@ -21,5 +21,5 @@ DROP TABLE IF EXISTS  `card`;
 CREATE TABLE  `card` (
    `id` bigint(20) NOT NULL AUTO_INCREMENT,
    `studentname` varchar(50) DEFAULT NULL comment '学生姓名',
-  `studentnumber` varchar(50) DEFAULT NULL,
+   `studentnumber` varchar(50) DEFAULT NULL,
 );

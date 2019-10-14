@@ -24,17 +24,20 @@
          <ul class="nav nav-pills nav-stacked">
            <li role="presentation" class="active"><a href="/card/list">列表</a></li>
            <li role="presentation"><a href="/card/add">新增</a></li>
+            <li role="presentation"><a href="/card/search">搜索</a></li>
          </ul>
        </div>
        <div class="col-md-8">      
          <table class="table table-hover">
            <thead>
-           <th>ID</th><th>名字</th><th>学号</th>
+            <th>ID</th><th>名字</th><th>学号</th><th>删除</th><th>修改</th>
            </thead>
            <tbody>
            <#list card as card>
            <tr>
            <td>${card.id}</td><td>${card.studentname}</td><td>${card.studentnumber}</td>
+            <td><a href="/card/delete/${card.id}">删除</a></td>
+            <td><a href="/card/modify/${card.id}">修改</a></td>
            </tr>
            </#list>
            </tbody>

@@ -24,6 +24,7 @@
          <ul class="nav nav-pills nav-stacked">
            <li role="presentation"><a href="/card/list">列表</a></li>
            <li role="presentation" class="active"><a href="/card/add">新增</a></li>
+            <li role="presentation"><a href="/card/search">搜索</a></li>
          </ul>
        </div>
        <div class="col-md-8">      

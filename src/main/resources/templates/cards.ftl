@@ -30,14 +30,15 @@
        <div class="col-md-8">      
          <table class="table table-hover">
            <thead>
-            <th>ID</th><th>名字</th><th>学号</th><th>删除</th><th>修改</th>
+            <th>ID</th><th>名字</th><th>学号</th><th>头像</th><th>删除</th><th>修改</th><th>头像</th>
            </thead>
            <tbody>
            <#list card as card>
            <tr>
-           <td>${card.id}</td><td>${card.studentname}</td><td>${card.studentnumber}</td>
+           <td>${card.id}</td><td>${card.studentname}</td><td>${card.studentnumber}</td><td>${card.avatar}</td>
             <td><a href="/card/delete/${card.id}">删除</a></td>
             <td><a href="/card/modify/${card.id}">修改</a></td>
+            <td><a href="/card/add_avatar/${card.id}">上传</a></td>
            </tr>
            </#list>
            </tbody>

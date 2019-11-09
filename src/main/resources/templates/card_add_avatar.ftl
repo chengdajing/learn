@@ -23,21 +23,15 @@
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
           <li role="presentation"><a href="/card/list">列表</a></li>
-          <li role="presentation"><a href="/card/add">新增</a></li>
-          <li role="presentation" class="active"><a href="#">修改</a></li>
-           <li role="presentation"><a href="/card/search">搜索</a></li>
+          <li role="presentation" class="active"><a href="/card/add">新增</a></li>
+          <li role="presentation"><a href="/card/search">搜索</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <form action="/card/do_modify">
-            <input type="hidden"id="id" name="id" value="${card.id}">
+        <form action="/card/do_add_avatar/${card.id}" enctype="multipart/form-data" method="post">
             <div class="form-group">
-                <label for="studentname">名字</label>
-                <input type="text" class="form-control" id="studentname" name="studentname" value="${card.studentname}" placeholder="请输入名字">
-            </div>
-            <div class="form-group">
-                <label for="studentnumber">学号</label>
-                <input type="studentnumber" class="form-control" id="studentnumber" name="studentnumber" value="${card.studentnumber}" placeholder="请输入学号">
+                <label for="avatar">头像图片</label>
+                <input type="file" class="form-control" id="avatar" name="avatar" placeholder="请选择图片">
             </div>
             <button type="submit" class="btn btn-default">确认</button>
         </form>
